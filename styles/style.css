@@ -46,7 +46,7 @@ h3 {
 h1#header {
     padding: 20px 30px 20px 0px;
     text-align: center;
-    background: transparent url(/images/logo.jpeg) no-repeat scroll center;
+    /*background: transparent url(/images/logo.jpeg) no-repeat scroll center;*/
 }
 
 h3 small {
