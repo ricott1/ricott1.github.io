@@ -19,7 +19,8 @@ a {
     border-bottom: 1px dotted #B22222;
 }
 
-a:hover {
+a:hover,
+a:active {
     color: #00FFFF;
     text-decoration: none;
     border-bottom: 1px solid #00FFFF;
@@ -102,7 +103,9 @@ h3 small {
 }
 
 .navbar a:hover,
+.navbar a:active,
 .dropdown:hover .dropbtn,
+.dropdown:active .dropbtn,
 .dropbtn:focus {
     background-color: #B22222;
 }
@@ -125,21 +128,19 @@ h3 small {
     text-align: center;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content a:active {
     background-color: #B22222;
     color: white;
 }
 
-
-/* Show the dropdown menu on hover */
-
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content {
     display: block;
 }
 
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn,
+.dropdown:active .dropbtn {
     background-color: #B22222;
 }
