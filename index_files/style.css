@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-family: helvetica, arial, sans-serif;
+    overflow-wrap: break-word;
+    background: #222;
+
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+nav {
+    grid-column: 1;
+    background-color: #111;
+    height: 100%;
+    /*width: 100%;*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: block;
+    min-width: 100px;
+}
+
+main {
+    grid-column: 2;
+    background-color: #222;
+    color: #ddd;
+    display: grid;
+    grid-template-areas: "tabs "
+        "top "
+        "center "
+        "center "
+        "center ";
+    grid-gap: 1em 0.25em;
+
+    margin-right: 10%;
+}
+
+.tab {
+    grid-area: tabs;
+    background-color: #111;
+    overflow: hidden;
+}
+
+.tab button,
+nav button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: #ccc;
+
+}
+
+.tab button {
+    float: left;
+    height: 100%;
+}
+
+nav button {
+    width: 100%;
+    float: top;
+}
+
+.tab button:hover,
+nav button:hover {
+    background-color: #ccc;
+    color: #111;
+}
+
+.tab button.active,
+nav button.active {
+    background-color: #ccc;
+    color: #111;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+}
+
+.main-top {
+    grid-area: top;
+    width: 100%;
+}
+
+.main-center {
+    grid-area: center;
+    width: auto;
+}
+
+.extra {
+    width: 100%;
+    min-width: 300px;
+    /*max-width: 600px;*/
+}
+
+input[type=number] {
+    width: 32px;
+}
+
+input,
+select,
+textarea {
+    background: #111;
+    color: #bbb;
+    border-color: #666;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+.saving-pic img {
+position:absolute;
+right:0;
+bottom:0;
+}
+
+.saving-pic table {
+position:relative; 
+padding-left:'images-width';
+}
+
+
+.sidepic {
+    float:left;
+    display:inline;
+}
+
+#picture {
+    max-width: 300px;
+}
+
+.nav-menu {
+    list-style:none;
+    padding:0;
+    margin:0;
+    margin-right:0px;
+    /*min-width:100px;*/
+    z-index: 1;
+}
+
+.nav-menu li {
+    margin-left:0px;
+    padding-bottom:0px;
+}
+
+.nav-menu li button {
+    display:block;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.menu-sub, .menu-sub-sub {
+    background-color: #111;
+    margin:0;
+    padding:0;
+    position: absolute;
+    list-style:none;
+    display:none;
+    left: 100%;
+    top: 0;
+}
+
+.nav-menu li:hover ul.menu-sub {
+    display: block;
+}
+
+.menu-sub li:hover ul.menu-sub-sub {
+    display: block;
+}

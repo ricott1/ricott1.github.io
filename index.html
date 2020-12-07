@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!-- saved from url=(0022)http://localhost:4000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Il Culo del Beholder</title>
-    <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#333">
-    <link rel="icon" type="image/png" href="./favicon.png">
-    <script src="./js/script.js"></script>
-    <script src="./js/templates/main_pg.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
+    <script src="./index_files/script.js"></script>
+    <script src="./index_files/main_pg.js"></script>
+    <link rel="stylesheet" href="./index_files/style.css">
 </head>
 
 <body>
     <nav id="nav">
         <ul class="nav-menu">
             <li><button>PG</button>
-                <ul class="menu-sub" id="pg-btns"></ul>
+                <ul class="menu-sub" id="pg-btns"><li><button class="nav-btn">Solomon Fleming</button></li><li><button class="nav-btn">Amras Lossëhelin</button></li><li><button class="nav-btn">Durance Talbaas</button></li></ul>
             </li>
             <li><button>PNG</button>
-                <ul class="menu-sub" id="png-btns"></ul>
+                <ul class="menu-sub" id="png-btns"><li><button class="nav-btn">Georg Corona</button></li></ul>
             </li>
             <li><button>Mappe</button>
                 <ul class="menu-sub">
-                    <li><button class="nav-btn" onclick="displayMap('map')">Regione</button></li>
-                    <li><button class="nav-btn" onclick="displayMap('amorgoi')">Amorgoi</button></li>
+                    <li><button class="nav-btn" onclick="displayMap(&#39;map&#39;)">Regione</button></li>
+                    <li><button class="nav-btn" onclick="displayMap(&#39;amorgoi&#39;)">Amorgoi</button></li>
                     <!-- <li><button>Mulino</button>
                         <ul class="menu-sub-sub">
                             <li><button class="nav-btn" onclick="displayMap('mulino/mulino_terra')">Piano Terra</button></li>
@@ -38,18 +37,18 @@
             </li>
             <li><button>Appunti</button>
                 <ul class="menu-sub">
-                    <li><button class="nav-btn" onclick="displayNotes('Storia')">Storia</button></li>
-                    <li><button class="nav-btn" onclick="displayNotes('Personaggi')">Personaggi</button></li>
-                    <li><button class="nav-btn" onclick="displayNotes('Luoghi')">Luoghi</button></li>
+                    <li><button class="nav-btn" onclick="displayNotes(&#39;Storia&#39;)">Storia</button></li>
+                    <li><button class="nav-btn" onclick="displayNotes(&#39;Personaggi&#39;)">Personaggi</button></li>
+                    <li><button class="nav-btn" onclick="displayNotes(&#39;Luoghi&#39;)">Luoghi</button></li>
                 </ul>
             </li>
             <li><button onclick="displayRandomPNG()">Random</button></li>
-            <li><button onclick="window.open('./manuali/Rules-Cyclopedia.pdf')">Manuale</button></li>
+            <li><button onclick="window.open(&#39;./manuali/Rules-Cyclopedia.pdf&#39;)">Manuale</button></li>
         </ul>
     </nav>
     <main id="main">
-        <img src="./imgs/beholder.png" alt="Il culo del Beholder" style="margin-top: 15%;margin-left: auto;margin-right: auto;display: block;" width="50%">
+        <img src="./index_files/beholder.png" alt="Il culo del Beholder" style="margin-top: 15%;margin-left: auto;margin-right: auto;display: block;" width="50%">
     </main>
-</body>
 
-</html>
+
+</body></html>
