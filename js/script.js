@@ -94,7 +94,7 @@ const displayNotes = async n => {
 const updateSheetBtns = type => {
     let pl = document.getElementById(type + '-btns');
     pl.innerHTML = '';
-    let players = JSON.parse(pgData);
+    let players = pgData;//JSON.parse(pgData);
     for (var i = 0; i < players.length; i++) {
         let pg = players[i];
         let b = document.createElement("button");
