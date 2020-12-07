@@ -1,0 +1,10 @@
+1	| 0			| Veteran-Medium
+2	| 4000		| Warrior-Seer;Warrior-Seeress
+3	| 8000		| Swordmaster-Conjurer;Swordmistress-Conjuress
+4	| 16000		| Hero-Magician;Heroine-Magician
+5	| 32000		| Swashbuckler-Enchanter;Swashbuckler-Enchantress
+6	| 64000		| Myrmidon-Warlock;Myrmidon-Witch
+7	| 120000	| Champion-Sorcerer;Champion-Sorceress
+8	| 250000	| Superhero-Necromancer;Superheroine-Necromancer
+9	| 400000	| Lord-Wizard;Lady-Wizard
+10	| 600000

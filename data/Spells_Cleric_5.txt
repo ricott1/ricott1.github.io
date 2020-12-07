@@ -1,0 +1,6 @@
+Commune
+Create Food
+Dispel Evil
+Insect Plague
+Quest*
+Raise Dead*

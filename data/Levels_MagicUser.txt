@@ -1,0 +1,14 @@
+1	| 0			| Medium
+2	| 2500		| Seer;Seeress
+3	| 5000		| Conjurer;Conjuress
+4	| 10000		| Magician
+5	| 20000		| Enchanter;Enchantress
+6	| 40000		| Warlock;Witch
+7	| 80000		| Sorcerer;Sorceress
+8	| 150000	| Necromancer
+9	| 300000	| Wizard
+10	| 450000
+11	| 600000
+12	| 750000
+13	| 900000
+14	| 1050000

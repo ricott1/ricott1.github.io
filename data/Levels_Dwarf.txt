@@ -1,0 +1,12 @@
+1	| 0			| Dwarven Veteran
+2	| 2200		| Dwarven Warrior
+3	| 4400		| Dwarven Swordmaster;Dwarven Swordmistress
+4	| 8800		| Dwarven Hero;Dwarven Heroine
+5	| 17000		| Dwarven Swashbuckler
+6	| 35000		| Dwarven Myrmidon
+7	| 70000		| Dwarven Champion
+8	| 140000	| Dwarven Superhero;Dwarven Superheroine
+9	| 270000	| Dwarven Lord;Dwarven Lady
+10	| 400000
+11	| 530000
+12	| 660000

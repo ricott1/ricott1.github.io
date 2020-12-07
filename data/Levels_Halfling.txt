@@ -1,0 +1,8 @@
+1	| 0			| Halfling Veteran
+2	| 2000		| Halfling Warrior
+3	| 4000		| Halfling Swordmaster;Halfling Swordmistress
+4	| 8000		| Halfling Hero;Halfling Heroine
+5	| 16000		| Halfling Swashbuckler
+6	| 32000		| Halfling Myrmidon
+7	| 64000		| Halfling Champion
+8	| 120000	| Sheriff

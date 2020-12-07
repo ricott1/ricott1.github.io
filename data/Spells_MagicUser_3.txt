@@ -1,0 +1,12 @@
+Clairvoyance
+Dispel Magic
+Fire Ball
+Fly
+Haste
+Hold Person
+Infravision
+Invisibility 10' Radius
+Lightning Bolt
+Protection from Evil 10' Radius
+Protection from Normal Missiles
+Water Breathing

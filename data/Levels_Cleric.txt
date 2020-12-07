@@ -1,0 +1,14 @@
+1	| 0			| Acolyte
+2	| 1500		| Adept
+3	| 3000		| Priest;Priestess
+4	| 6000		| Vicar
+5	| 12000		| Curate
+6	| 25000		| Elder
+7	| 50000		| Bishop
+8	| 100000	| Lama
+9	| 200000	| Patriarch;Matriarch
+10	| 300000
+11	| 400000
+12	| 500000
+13	| 600000
+14	| 700000

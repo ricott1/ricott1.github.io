@@ -1,0 +1,8 @@
+Cure Light Wounds*
+Detect Evil
+Detect Magic
+Light*
+Protection from Evil
+Purify Food and Water
+Remove Fear*
+Resist Cold

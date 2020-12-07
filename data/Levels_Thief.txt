@@ -1,0 +1,14 @@
+1	| 0			| Apprentice
+2	| 1200		| Footpad
+3	| 2400		| Robber
+4	| 4800		| Burglar
+5	| 9600		| Cutpurse
+6	| 20000		| Sharper
+7	| 40000		| Pilferer
+8	| 80000		| Thief
+9	| 160000	| Master Thief
+10	| 280000
+11	| 400000
+12	| 520000
+13	| 640000
+14	| 760000
