@@ -61,7 +61,7 @@ const saveData = collection => {
 
 const displayMap = map => {
     let main = document.getElementById('main');
-    main.innerHTML = `<img src="./imgs/map/${map}.png" alt="Map" style="max-width:80%;max-height:80%;">`
+    main.innerHTML = `<img src="./imgs/map/${map}.png" alt="Map">`
     main.className = "main_map";
 };
 
