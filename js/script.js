@@ -66,7 +66,7 @@ const displayMap = map => {
 };
 
 const displaySheet = (pg, type='pg') => {
-    updateSheetBtns(type);
+    // updateSheetBtns(type);
     let main = document.getElementById('main');
     main.innerHTML = pgTemplate(pg, type);
     main.className = "main_pg";
@@ -110,6 +110,6 @@ const updateSheetBtns = type => {
 }
 
 window.onload = () => {
-    updateSheetBtns('pg');
-    updateSheetBtns('png');
+    // updateSheetBtns('pg');
+    // updateSheetBtns('png');
 }
