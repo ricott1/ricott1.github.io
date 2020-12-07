@@ -92,24 +92,23 @@ const displayNotes = async n => {
 };
 
 const updateSheetBtns = type => {
-    getReq(type, {}, res => {
-        let pl = document.getElementById(type + '-btns');
-        pl.innerHTML = '';
-        let players = JSON.parse(res);
-        for (var i = 0; i < players.length; i++) {
-            let pg = players[i];
-            let b = document.createElement("button");
-            b.classList = "nav-btn";
-            b.onclick = () => displaySheet(pg, type);
-            b.innerHTML = pg.name;
-            let li = document.createElement("li");
-            li.appendChild(b);
-            pl.appendChild(li);
-        }
-    });
+    let pl = document.getElementById(type + '-btns');
+    pl.innerHTML = '';
+    let players = JSON.parse(pgData);
+    for (var i = 0; i < players.length; i++) {
+        let pg = players[i];
+        let b = document.createElement("button");
+        b.classList = "nav-btn";
+        b.onclick = () => displaySheet(pg, type);
+        b.innerHTML = pg.name;
+        let li = document.createElement("li");
+        li.appendChild(b);
+        pl.appendChild(li);
+    }
+
 }
 
 window.onload = () => {
-    // updateSheetBtns('pg');
+    updateSheetBtns('pg');
     // updateSheetBtns('png');
 }
