@@ -29,9 +29,9 @@ const getReq = (path, params = {}, callback = null) => {
     }
     if (Object.keys(params).length !== 0) {
         let p = new URLSearchParams(params).toString();
-        xmlHttp.open('GET', `http://${window.location.host}/${path}?${p}`, true); // true for asynchronous 
+        xmlHttp.open('GET', `https://${window.location.host}/${path}?${p}`, true); // true for asynchronous 
     } else {
-        xmlHttp.open('GET', `http://${window.location.host}/${path}`, true);
+        xmlHttp.open('GET', `https://${window.location.host}/${path}`, true);
     }
 
     xmlHttp.send(null);
@@ -54,7 +54,7 @@ const saveData = collection => {
         }
     }
 
-    xmlHttp.open('POST', `http://${window.location.host}/saveData/${collection}`, true);
+    xmlHttp.open('POST', `https://${window.location.host}/saveData/${collection}`, true);
     xmlHttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     xmlHttp.send(JSON.stringify(data));
 }
