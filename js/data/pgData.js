@@ -360,7 +360,7 @@ var pgData = [
     monete_rame: '0',
     monete_argento: '0',
     monete_oro: '70',
-    equipaggiamento: '',
+    equipaggiamento: 'siero ortica, viagra, miele allucinogeno, antibrufoli, tinta per capelli bionda',
     background_text: '',
     note_text: ''
   },
