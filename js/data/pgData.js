@@ -363,5 +363,77 @@ var pgData = [
     equipaggiamento: '',
     background_text: '',
     note_text: ''
+  },
+  {
+    name: 'Dario',
+    classe: 'ladro',
+    livello: '1',
+    isDead: false,
+    esperienza: '0',
+    allineamento: 'caotico',
+    atk_mischia: '0',
+    danno: '1',
+    atk_distanza: '0',
+    ca: '17',
+    punti_vita: '2',
+    punti_vita_massimi: '2',
+    forza: '11',
+    tratti_forza: 'Rovescia tavoli',
+    extra_forza: '',
+    intelligenza: '9',
+    tratti_intelligenza: 'linguaggio dei ladri',
+    extra_intelligenza: '',
+    saggezza: '10',
+    tratti_saggezza: 'Conoscenza della strada',
+    extra_saggezza: '',
+    costituzione: '9',
+    tratti_costituzione: 'Ho sofferto di lebbra',
+    extra_costituzione: '',
+    destrezza: '16',
+    tratti_destrezza: 'Acrobata',
+    extra_destrezza: '',
+    carisma: '14',
+    tratti_carisma: 'Truffatore',
+    extra_carisma: "",
+    morte_veleno: '12',
+    bacchette_metamorfosi_paralisi: '13',
+    pietrificazione: '14',
+    soffio: '15',
+    bastoni_incantesimi: '16',
+    arma_1: 'Spada',
+    atk_arma_1: '1',
+    danno_arma_1: '0',
+    extra_arma_1: 'danno 1d6',
+    arma_2: '',
+    atk_arma_2: '0',
+    danno_arma_2: '0',
+    extra_arma_2: '',
+    arma_3: '',
+    atk_arma_3: '0',
+    danno_arma_3: '0',
+    extra_arma_3: '',
+    armatura_1: 'Armatura di Cuoio',
+    difesa_armatura_1: '12',
+    bonus_armatura_1: '0',
+    extra_armatura_1: '',
+    armatura_2: '',
+    difesa_armatura_2: '0',
+    bonus_armatura_2: '0',
+    extra_armatura_2: '',
+    monete_rame: '0',
+    monete_argento: '0',
+    monete_oro: '12',
+    equipaggiamento: 'Mazza\n' +
+      '5 pugnali\n' +
+      'Arco corto\n' +
+      'Armatura di Cuoio\n' +
+      'Razioni da dungeon per 1 settimana per 1 persona\n' +
+      'Zaino in cuoio\n' +
+      '1 Torcia\n' +
+      '1 spada corta\n' +
+      '\n',
+    background_text: "",
+    note_text: ''
   }
+
 ]
