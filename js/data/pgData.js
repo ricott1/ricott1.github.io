@@ -365,7 +365,7 @@ var pgData = [
     note_text: ''
   },
   {
-    name: 'Dario',
+    name: 'Alan con la acca davanti',
     classe: 'ladro',
     livello: '1',
     isDead: false,
