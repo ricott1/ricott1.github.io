@@ -290,7 +290,15 @@ var pgData = [
     monete_rame: '0',
     monete_argento: '0',
     monete_oro: '110',
-    equipaggiamento: '',
+    equipaggiamento: 'Plate 60\n' +
+                      'shield 10\n' +
+                      'ascia battaglia 7 77\n' +
+                      'zaino 5 82\n' +
+                      'tinder box 3 85\n' +
+                      'middle class clothes 5 90\n' +
+                      'lanterna 10\n' +
+                      'olio 2 102\n' +
+                      'razioni 5',
     background_text: '',
     note_text: ''
   },
