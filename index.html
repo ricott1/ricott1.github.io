@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#333">
     <link rel="icon" type="image/png" href="./favicon.png">
-
     <script src="./js/data/pgData.js"></script>
-    <script src="./js/templates/main_pg.js"></script>
     <script src="./js/script.js"></script>
-
+    <script src="./js/templates/main_pg.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -21,22 +19,24 @@
             <li><button>PG</button>
                 <ul class="menu-sub" id="pg-btns"></ul>
             </li>
-            <!-- <li><button>PNG</button>
+            <li><button>Cari Estinti</button>
+                <ul class="menu-sub" id="dead-pg-btns"></ul>
+            </li>
+            <li><button>PNG</button>
                 <ul class="menu-sub" id="png-btns"></ul>
-            </li> -->
+            </li>
             <li><button>Mappe</button>
                 <ul class="menu-sub">
                     <li><button class="nav-btn" onclick="displayMap('map')">Regione</button></li>
                     <li><button class="nav-btn" onclick="displayMap('amorgoi')">Amorgoi</button></li>
-                    <!-- <li><button>Mulino</button>
+                    <li><button>Mulino</button>
                         <ul class="menu-sub-sub">
                             <li><button class="nav-btn" onclick="displayMap('mulino/mulino_terra')">Piano Terra</button></li>
-                            <li><button class="nav-btn" onclick="displayMap('mulino/mulino_primo')">Primo Piano</button></li> -->
-                            <!-- SPOILER!! -->
-                            <!-- <li><button class="nav-btn" onclick="displayMap('mulino/mulino_sotto')">Sotterraneo</button></li>
-                            <li><button class="nav-btn" onclick="displayMap('mulino/mulino_segreto')">Sotterraneo Segreto</button></li> -->
-                        <!-- </ul> -->
-                    <!-- </li> -->
+                            <li><button class="nav-btn" onclick="displayMap('mulino/mulino_primo')">Primo Piano</button></li>
+                            <li><button class="nav-btn" onclick="displayMap('mulino/mulino_sotto')">Sotterraneo</button></li>
+                            <li><button class="nav-btn" onclick="displayMap('mulino/mulino_segreto')">Sotterraneo Segreto</button></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li><button>Appunti</button>
@@ -46,7 +46,7 @@
                     <li><button class="nav-btn" onclick="displayNotes('Luoghi')">Luoghi</button></li>
                 </ul>
             </li>
-            <!-- <li><button onclick="displayRandomPNG()">Random</button></li> -->
+            <!-- <li><button onclick="displayRandomSheet()">Random</button></li> -->
             <li><button onclick="window.open('./manuali/Rules-Cyclopedia.pdf')">Manuale</button></li>
         </ul>
     </nav>

@@ -29,9 +29,9 @@ const getReq = (path, params = {}, callback = null) => {
     }
     if (Object.keys(params).length !== 0) {
         let p = new URLSearchParams(params).toString();
-        xmlHttp.open('GET', `https://${window.location.host}/${path}?${p}`, true); // true for asynchronous 
+        xmlHttp.open('GET', `http://${window.location.host}/${path}?${p}`, true); // true for asynchronous 
     } else {
-        xmlHttp.open('GET', `https://${window.location.host}/${path}`, true);
+        xmlHttp.open('GET', `http://${window.location.host}/${path}`, true);
     }
 
     xmlHttp.send(null);
@@ -42,44 +42,50 @@ const saveData = collection => {
     let data = {};
     for (var i = 0; i < info.length; i++) {
         let el = document.getElementById(info[i]);
-        data[info[i]] = el.value || el.innerHTML;
+        if (el.nodeName === 'H3') data[info[i]] = el.innerHTML;
+        else if (el.nodeName === 'INPUT' && el.type === 'checkbox') {
+            data[info[i]] = el.checked ? true : false;
+            console.log("checked", info[i])
+        } else data[info[i]] = el.value;
     }
 
     const xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = () => {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             console.log(xmlHttp.responseText);
-            document.getElementById('saveBtn').innerHTML = "Saved!";
-            setTimeout(() => document.getElementById('saveBtn').innerHTML = "Save", 2000);
+            document.getElementById('saveBtn').innerHTML = "Salvato!";
+            setTimeout(() => document.getElementById('saveBtn').innerHTML = "Salva", 2000);
         }
     }
 
-    xmlHttp.open('POST', `https://${window.location.host}/saveData/${collection}`, true);
+    xmlHttp.open('POST', `http://${window.location.host}/saveData/${collection}`, true);
     xmlHttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     xmlHttp.send(JSON.stringify(data));
+    updateSheetBtns();
 }
 
 const displayMap = map => {
     let main = document.getElementById('main');
-    main.innerHTML = `<img src="./imgs/map/${map}.png" alt="Map">`
+    main.innerHTML = `<img src="./imgs/map/${map}.png" alt="Map" style="max-width:80%;max-height:80%;">`
     main.className = "main_map";
 };
 
-const displaySheet = (pg, type='pg') => {
-    // updateSheetBtns(type);
+const displaySheet = pg => {
+    updateSheetBtns();
     let main = document.getElementById('main');
-    main.innerHTML = pgTemplate(pg, type);
+    main.innerHTML = pgTemplate(pg);
     main.className = "main_pg";
     pgListeners(pg);
 };
 
-const displayRandomPNG = () => {
+const displayRandomSheet = () => {
     let l = document.getElementById('livello') ? document.getElementById('livello').value : 1;
     let c = document.getElementById('classe') ? document.getElementById('classe').value : 'random';
-    getReq(`random/png/${l}/${c}`, {}, res => {
+    console.log(l, c)
+    getReq(`random/sheet/${l}/${c}`, {}, res => {
         let main = document.getElementById('main');
         let pg = JSON.parse(res);
-        main.innerHTML = pgTemplate(pg, 'png');
+        main.innerHTML = pgTemplate(pg, true);
         main.className = "main_pg";
         pgListeners(pg);
     });
@@ -91,24 +97,47 @@ const displayNotes = async n => {
     main.innerHTML = await (await fetch(`./wiki/${n}.html`)).text();
 };
 
-const updateSheetBtns = type => {
-    let pl = document.getElementById(type + '-btns');
-    pl.innerHTML = '';
-    let players = pgData;//JSON.parse(pgData);
+// const updateSheetBtns = type => {
+//     let pl = document.getElementById(type + '-btns');
+//     pl.innerHTML = '';
+//     let players = pgData; //JSON.parse(pgData);
+//     for (var i = 0; i < players.length; i++) {
+//         let pg = players[i];
+//         let b = document.createElement("button");
+//         b.classList = "nav-btn";
+//         b.onclick = () => displaySheet(pg, type);
+//         b.innerHTML = pg.name;
+//         let li = document.createElement("li");
+//         li.appendChild(b);
+//         pl.appendChild(li);
+//     }
+
+// }
+
+const updateSheetBtns = () => {
+    let players = pgData;
+    let pgMenu = document.getElementById('pg-btns');
+    pgMenu.innerHTML = '';
+    let pngMenu = document.getElementById('png-btns');
+    pngMenu.innerHTML = '';
+    let deadPgMenu = document.getElementById('dead-pg-btns');
+    deadPgMenu.innerHTML = '';
     for (var i = 0; i < players.length; i++) {
         let pg = players[i];
         let b = document.createElement("button");
         b.classList = "nav-btn";
-        b.onclick = () => displaySheet(pg, type);
+        b.onclick = () => displaySheet(pg);
         b.innerHTML = pg.name;
         let li = document.createElement("li");
         li.appendChild(b);
-        pl.appendChild(li);
+        if (pg.isPNG) pngMenu.appendChild(li);
+        else if (pg.isDead) deadPgMenu.appendChild(li);
+        else pgMenu.appendChild(li);
     }
 
 }
 
 window.onload = () => {
     updateSheetBtns('pg');
-    // updateSheetBtns('png');
+    updateSheetBtns('png');
 }

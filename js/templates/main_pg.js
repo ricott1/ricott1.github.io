@@ -1,4 +1,4 @@
-const pgTemplate = (pg, type='pg') => {
+const pgTemplate = (pg, _new=false) => {
     console.log(pg, pg.classe === 'halfling');
     let html = `
 <div class="tab">     
@@ -6,16 +6,15 @@ const pgTemplate = (pg, type='pg') => {
     <button class="tablinks" onclick="changeTab(event, 'inventario')">Inventario</button>
     <button class="tablinks" onclick="changeTab(event, 'background')">Background</button>
     <button class="tablinks" onclick="changeTab(event, 'note')">Appunti</button>
-    <button id="saveBtn" onclick="saveData('${type}')">Salva</button>
+    <button id="saveBtn" onclick="saveData('sheets')">Salva</button>
 </div>
 
 <div class="main-top">`
-    if (type==='pg') {
-       html += `<h3 class="exportable" id="name">${pg.name||''}</h3>`
-    } else if (type==='png') {
-        html += `<h3><input style="width:240px;font-size: 1em; font-weight: bold;" type="text" class="exportable" id="name" value ="${pg.name||''}"></input></h3>`
+    if (_new) {
+       html += `<h3><input style="width:240px;font-size: 1em; font-weight: bold;" type="text" class="exportable" id="name" value ="${pg.name||''}"></input></h3>`
+    } else {
+       html += `<h3 class="exportable" id="name">${pg.name||''}</h3>` 
     }
-
 
     html += `
     <label for="class">Classe</label>
@@ -33,13 +32,18 @@ const pgTemplate = (pg, type='pg') => {
     <input class="exportable" type="number" id="livello" name="livello" value="${pg.livello||1}" min="1" max="20">
     <label for="esperienza">Exp</label>
     <input class="exportable" type="number" id="esperienza" name="esperienza" value="${pg.esperienza||0}" min="0" style="width: 52px">/
-    <input type="number" id="levelup_esperienza"  value="1000" style="width: 52px" disabled="true">
+    <input type="number" id="levelup_esperienza"  value="1000" style="width: 52px">
     <label for="allineamento">Allineamento</label>
     <select class="exportable" name="allineamento" id="allineamento">
         <option ${pg.allineamento === 'legale' ? 'selected' : ''} value="legale">Legale</option>
         <option ${pg.allineamento === 'neutrale' ? 'selected' : ''} value="neutrale">Neutrale</option>
         <option ${pg.allineamento === 'caotico' ? 'selected' : ''} value="caotico">Caotico</option>
-    </select><br>
+    </select>
+    <input type="checkbox" class="exportable checkbox" id="isPNG" name="isPNG" ${pg.isPNG ? 'checked' : ''}>
+    <label for="isPNG">PNG</label>
+    <input type="checkbox" class="exportable checkbox" id="isDead" name="isDead" ${pg.isDead ? 'checked' : ''}>
+    <label for="isDead">Deceduto</label>
+    <br>
     <label for="atk_mischia">Mischia</label>
     <input class="exportable" type="number" id="atk_mischia" name="atk_mischia" value="${pg['atk_mischia']||0}" min="-3" max="5">
     <label for="danno">Danno</label>
